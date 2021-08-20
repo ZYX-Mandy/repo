@@ -1,0 +1,15 @@
+touch hello.java //建立一个文件(readme.txt什么的都可以)
+mkdir test //建立一个叫test的文件夹
+
+/*第一次提交，第一次连接github、gogs等 远程仓库*/
+git init
+git add  hello.java
+git commit -m "第一次提交" //到这句为止，作用是提交到本地仓库
+                         //当然每次提交的文件需要先复制到仓库中
+git remote add origin http://XXXX //origin后接远程仓库地址
+git push -u origin master //第一次提交到远程仓库必须要这句
+
+/*更改后第二次提交，或者提交其他文件*/
+git add . //.表示全部新文件，或者直接 git add readme.txt 指明是哪个
+git commit -m "第二次提交"
+git push
